@@ -25,6 +25,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ .bold {
+  font-weight: bold;
+ }
+ 
  main {
   display: flex;
   width: 90%;

@@ -12,7 +12,7 @@ nav {
   position: fixed;
 }
 
-nav span {
+.logo {
   font-family: 'Bungee', cursive;
 }
 
