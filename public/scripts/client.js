@@ -11,7 +11,7 @@ $(document).ready(() => { //Call the callbacks when the document is fully loaded
 });
 
 const loadTweets = function() { //Receives an array of tweets as JSON and renders it to the DOM.
-  $.ajax('/tweets', {
+  $.ajax('/tweets', { //To fetch the tweet from the server.
     method: 'GET',
   })
   .done(function(response) {
@@ -27,7 +27,7 @@ const formSubmission = function() { //Created to host the event handler and the 
     event.preventDefault();
     console.log("Submission in progress...");
 
-    $.ajax('/tweets', {
+    $.ajax('/tweets', { //To send the tweet to the server.
       method: 'POST',
       data: $form.serialize(),
     })
@@ -56,6 +56,8 @@ const renderTweets = function(tweets) { //Appends each tweet to #tweets-containe
 const createTweetElement = function(tweet) { //Returns the HTML structure of a tweet.
   const user = tweet.user;
   const content = tweet.content;
+  const timePassed = timeago.format(tweet.created_at);
+
   let htmlStructure = `
   <article class="tweet">
   <header>
@@ -67,7 +69,7 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
     <p class="tweet-content-text">${content.text}</p>
   </div>
   <footer>
-    <div class="time">${tweet.created_at}</div>
+    <div class="time">${timePassed}</div>
     <div class="icons">
       <span><i class="fa-solid fa-flag"></i>&nbsp</span>
       <span><i class="fa-solid fa-retweet"></i>&nbsp</span>
