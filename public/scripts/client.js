@@ -29,9 +29,29 @@ const data = [
   }
 ];
 
-$(document).ready(() => { //Call the callback when the document is fully loaded/ ready.
+$(document).ready(() => { //Call the callbacks when the document is fully loaded/ ready.
   renderTweets(data);
+  formSubmission();
 });
+
+const formSubmission = function() { //Created to host the event handler and the Ajax request.
+  const $form = $('#tweet-form');
+  $form.submit(function(event) {
+    event.preventDefault();
+    console.log("Submission in progress...");
+  });
+};
+
+
+
+const renderTweets = function(tweets) { //Appends each tweet to #tweets-container.
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $('#tweets-container').append($tweet);
+  }
+};
+
+
 
 const createTweetElement = function(tweet) { //Returns the HTML structure of a tweet.
   const user = tweet.user;
@@ -59,11 +79,4 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
   `;
 
   return htmlStructure;
-};
-
-const renderTweets = function(tweets) { //Appends each tweet to #tweets-container.
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
-  }
 };
