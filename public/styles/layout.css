@@ -36,3 +36,10 @@ body {
   text-align: center;
   background-color: #f4f1ec;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
