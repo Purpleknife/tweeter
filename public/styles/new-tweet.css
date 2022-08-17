@@ -1,7 +1,6 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 90%;
   margin: 0 auto;
 }
@@ -13,8 +12,27 @@
   width: 100%;
   border: none;
   resize: none;
+  outline: none;
   border-bottom: 5px solid grey;
   background: transparent;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.new-tweet textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.new-tweet textarea::-webkit-scrollbar-track {
+  background: #f4f1ec;
+}
+
+.new-tweet textarea::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.new-tweet textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .new-tweet div {
@@ -25,6 +43,10 @@
   padding-top: 0.50em;
 }
 
+.new-tweet label {
+  display: flex;
+  font-weight: bold;
+}
 
 .new-tweet button {
   background-color: #4056A1;
