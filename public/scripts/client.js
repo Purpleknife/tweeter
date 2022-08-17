@@ -8,6 +8,7 @@
 $(document).ready(() => { //Call the callbacks when the document is fully loaded/ ready.
   formSubmission();
   loadTweets();
+  renderTweets();
 });
 
 
@@ -29,13 +30,15 @@ const formSubmission = function() { //Created to host the event handler and the 
   $form.submit(function(event) {
     event.preventDefault();
     
+    $('#validation-error-alert').slideUp('fast'); //Error box slides up when a new valid tweet is submitted.
+
     const $tweetInput = $('#tweet-text');
     if (!$tweetInput.val()) { //If input in form is empty.
-      alert('Empty field. Please enter a valid tweet.');
+      validationError('&#9888; Empty field. Please enter a valid tweet.');
       return;
     }
     if ($tweetInput.val().length > 140) { //If input in form exceeds 140 characters.
-      alert('You exceeded the 140 characters limit.');
+      validationError('&#9888; You exceeded the 140 characters limit.');
       return;
     }
 
@@ -97,8 +100,20 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
   return htmlStructure;
 };
 
+
+
 const escapeXSS = function(str) { //Function to prevent XSS by re-encoding. Changed its name to escapeXSS() because JS kept mistaking it with the depreciated escape().
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+
+
+const validationError = function(msg) { //For error messages animations.
+  const $errorMsg = $('#validation-error-alert');
+
+  $errorMsg.hide() //Its default is to be hidden.
+    .html(msg) //Show the error msg.
+    .slideDown('fast'); //Error box slides down with error msg.
+}
