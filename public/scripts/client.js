@@ -25,7 +25,16 @@ const formSubmission = function() { //Created to host the event handler and the 
   const $form = $('#tweet-form');
   $form.submit(function(event) {
     event.preventDefault();
-    console.log("Submission in progress...");
+    
+    const $tweetInput = $('#tweet-text');
+    if (!$tweetInput.val()) { //If input in form is empty.
+      alert('Empty field. Please enter a valid tweet.');
+      return;
+    }
+    if ($tweetInput.val().length > 140) { //If input in form exceeds 140 characters.
+      alert('You exceeded the 140 characters limit.');
+      return;
+    }
 
     $.ajax('/tweets', { //To send the tweet to the server.
       method: 'POST',
@@ -38,7 +47,7 @@ const formSubmission = function() { //Created to host the event handler and the 
       console.log('Submission failed.');
     });
   $('#tweet-text').val(''); //To clear the form after submission.
-  $('.counter').val(140); //To reset the counter to its default/ max val: 140.
+  $('.counter').val(140).css('color', '#545149'); //To reset the counter to its default/ max val: 140.
   });
 };
 
