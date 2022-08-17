@@ -80,7 +80,7 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
     <div class="username">${user.handle}</div>
   </header>
   <div class="tweet-content">
-    <p class="tweet-content-text">${content.text}</p>
+    <p class="tweet-content-text">${escapeXSS(content.text)}</p>
   </div>
   <footer>
     <div class="time">${timePassed}</div>
@@ -95,4 +95,10 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
   `;
 
   return htmlStructure;
+};
+
+const escapeXSS = function(str) { //Function to prevent XSS by re-encoding. Changed its name to escapeXSS() because JS kept mistaking it with the depreciated escape().
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
