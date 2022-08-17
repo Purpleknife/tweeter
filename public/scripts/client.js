@@ -39,6 +39,19 @@ const formSubmission = function() { //Created to host the event handler and the 
   $form.submit(function(event) {
     event.preventDefault();
     console.log("Submission in progress...");
+
+    $.ajax('/tweets', {
+      method: 'POST',
+      data: $form.serialize(),
+    })
+      .done(function() {
+        console.log('Tweet submitted.');
+      })
+      .fail(function() {
+        console.log('Submission failed.');
+      });
+  $('#tweet-text').val(''); //To clear the form after submission.
+  $('.counter').val(140); //To reset the counter to its default/ max val: 140.
   });
 };
 
