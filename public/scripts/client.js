@@ -10,11 +10,14 @@ $(document).ready(() => { //Call the callbacks when the document is fully loaded
   loadTweets();
 });
 
+
+
 const loadTweets = function() { //Receives an array of tweets as JSON and renders it to the DOM.
   $.ajax('/tweets', { //To fetch the tweet from the server.
     method: 'GET',
   })
   .done(function(response) {
+    $('#tweets-container').empty(); //Empty container so we don't end up with repeated old tweets.
     renderTweets(response);
   })
 };
@@ -38,14 +41,16 @@ const formSubmission = function() { //Created to host the event handler and the 
 
     $.ajax('/tweets', { //To send the tweet to the server.
       method: 'POST',
-      data: $form.serialize(),
+      data: $(this).serialize(),
     })
     .done(function() {
+      loadTweets(); //So the tweet shows up without having to refresh.
       console.log('Tweet submitted.');
     })
     .fail(function() {
       console.log('Submission failed.');
     });
+
   $('#tweet-text').val(''); //To clear the form after submission.
   $('.counter').val(140).css('color', '#545149'); //To reset the counter to its default/ max val: 140.
   });
@@ -53,10 +58,10 @@ const formSubmission = function() { //Created to host the event handler and the 
 
 
 
-const renderTweets = function(tweets) { //Appends each tweet to #tweets-container.
+const renderTweets = function(tweets) { //Add each tweet to #tweets-container.
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet); //Changed from append to prepend so the tweet shows up at the top.
   }
 };
 
