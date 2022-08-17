@@ -16,6 +16,10 @@ article.tweet {
   height: 250px;
 }
 
+article.tweet:hover {
+  box-shadow: 10px 10px #c2cdf7;
+}
+
 article.tweet header {
   display: flex;
   flex-direction: row;
@@ -64,4 +68,8 @@ article.tweet footer {
 
 article.tweet footer .icons {
   color: rgb(36, 36, 124);
+}
+
+article.tweet footer .icons span:hover {
+  color: rgb(231, 137, 13);
 }
