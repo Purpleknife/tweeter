@@ -13,7 +13,7 @@ const data = [
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "If I have seen further it is by standing on the shoulders of giants."
     },
     "created_at": 1461116232227
   },
@@ -23,24 +23,17 @@ const data = [
       "avatars": "https://i.imgur.com/nlhLi3I.png",
       "handle": "@rd" },
     "content": {
-      "text": "Je pense, donc je suis"
+      "text": "Je pense, donc je suis."
     },
     "created_at": 1461113959088
   }
-]
+];
 
-$(document).ready(() => {
+$(document).ready(() => { //Call the callback when the document is fully loaded/ ready.
   renderTweets(data);
 });
 
-const renderTweets = function(tweets) {
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
-  }
-};
-
-const createTweetElement = function(tweet) {
+const createTweetElement = function(tweet) { //Returns the HTML structure of a tweet.
   const user = tweet.user;
   const content = tweet.content;
   let htmlStructure = `
@@ -67,4 +60,10 @@ const createTweetElement = function(tweet) {
 
   return htmlStructure;
 };
-console.log($tweet);
+
+const renderTweets = function(tweets) { //Appends each tweet to #tweets-container.
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $('#tweets-container').append($tweet);
+  }
+};
