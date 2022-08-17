@@ -53,3 +53,15 @@
   color: white;
   border: none;
 }
+
+#validation-error-alert {
+  margin-bottom: 10px;
+  padding: 20px;
+  color: #dd5757;
+  background: #ffe0e0;
+  border: 2px solid #dd5757;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: none;
+  text-align: left;
+}
