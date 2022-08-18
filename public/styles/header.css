@@ -17,17 +17,10 @@ header {
   header {
     display: flex;
     width: 30%;
+    height: 18em;
     float: left;
     flex-direction: column;
     margin-left: 50px;
     margin-top: 200px;
-  }
-}
-/* To show the username before 1024px (like in the GIF in Compass) */
-@media only screen and (min-width: 1400px) {
-  header .username {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 300s, opacity 300ms;
   }
 }
