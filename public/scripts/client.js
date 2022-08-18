@@ -120,7 +120,7 @@ const validationError = function(msg) { //For error messages animations.
 
 
 
-const formToggle = function() { //Form toggle (Stretch).
+const formToggle = function() { //Nav Form toggle (Stretch).
   const $pointer = $('#angle-down-icon');
   const $form = $('#tweet-form');
 
