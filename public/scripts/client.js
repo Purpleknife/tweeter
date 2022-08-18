@@ -128,5 +128,4 @@ const formToggle = function() { //Form toggle (Stretch).
     $form.slideToggle(); //Form slides up and down when pointer is clicked.
     $('textarea').focus(); //Focus on textarea so user can begin typing right away.
   })
-  
 };
