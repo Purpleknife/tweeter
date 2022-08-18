@@ -2,6 +2,8 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+The server-side code (back-end) was provided by Lighthouse Labs. This project is client-side oriented (frond-end).
+
 This project's goals were:
   - Build a Single Page App with jQuery and AJAX.
   - Develop Frond-end skills by using HTML, JS, CSS, SASS, jQuery and AJAX.
