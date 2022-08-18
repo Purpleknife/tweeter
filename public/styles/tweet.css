@@ -69,6 +69,7 @@ article.tweet footer .icons {
 
 article.tweet footer .icons span:hover {
   color: rgb(231, 137, 13);
+  cursor: pointer;
 }
 
 /* 
