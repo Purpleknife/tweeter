@@ -25,7 +25,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 .bold {
-  font-weight: bold;
+  font-weight: 900;
+}
+
+.white {
+  color: white;
 }
 
 main {
