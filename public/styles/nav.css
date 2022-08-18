@@ -16,10 +16,13 @@ nav {
   font-family: 'Bungee', cursive;
 }
 
-.tweet {
-  text-align: center;
+#angle-down-icon {
+  color: red;
+  margin-left: 50%;
+  margin-top: 0.5em;
 }
 
-.angle-down-icon {
-  color: red;
+#angle-down-icon:hover {
+  position: relative; 
+  bottom: -10px;
 }
