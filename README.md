@@ -40,8 +40,8 @@ This project's goals were:
 #Desktop Full Screen:
 !["Desktop Full Screen"](https://github.com/Purpleknife/tweeter/blob/master/docs/desktop-full-screen-view.png?raw=true)
 
-#Desktop after implemting Responsive Design:
-!["Desktop after implemting Responsive Design"](https://github.com/Purpleknife/tweeter/blob/master/docs/desktop-responsive-design.png?raw=true)
+#Desktop after implementing Responsive Design:
+!["Desktop after implementing Responsive Design"](https://github.com/Purpleknife/tweeter/blob/master/docs/desktop-responsive-design.png?raw=true)
 
 #Error handling 1: Exceeded 140 characters
 !["Error handling 1"](https://github.com/Purpleknife/tweeter/blob/master/docs/error-input1.png?raw=true)
