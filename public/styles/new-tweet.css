@@ -52,6 +52,13 @@
   background-color: #4056A1;
   color: white;
   border: none;
+  font-size: 90%;
+  text-align: center;
+}
+
+.new-tweet button:focus {
+  box-shadow: 0 0 0 3px rgb(137, 161, 224);
+  border-radius: 5%;
 }
 
 #validation-error-alert {
