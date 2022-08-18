@@ -48,12 +48,20 @@ body {
   width: 90%;
 }
 
-#scroll-up-button {
-  color: red;
-  text-align: right;
+@mixin vertical-align() {
+  transform: translateY(-50%);
   position: fixed;
   right: 20px;
   bottom: 30px;
+}
+
+#scroll-up-button {
+  color: red;
+  @include vertical-align();
+}
+
+#scroll-up-button:hover {
+  top: 95%;
 }
 
 /* 

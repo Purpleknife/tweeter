@@ -45,10 +45,14 @@ main {
 
 #scroll-up-button {
   color: red;
-  text-align: right;
+  transform: translateY(-50%);
   position: fixed;
   right: 20px;
   bottom: 30px;
+}
+
+#scroll-up-button:hover {
+  top: 95%;
 }
 
 /* 
