@@ -27,6 +27,7 @@ body {
 
  .bold {
   font-weight: bold;
+  color: white;
  }
 
  main {
@@ -42,4 +43,12 @@ body {
   flex-direction: column;
   margin: 0 auto;
   width: 90%;
+}
+
+#scroll-up-button {
+  color: red;
+  text-align: right;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
 }
