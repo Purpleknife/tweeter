@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+@import 'variables';
+
+
 html {
   box-sizing: border-box;
 }
@@ -15,10 +19,10 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $font-color;
+  background-color: $secondary-background-color;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $primary-font;
 }
 
 /*
@@ -27,7 +31,6 @@ body {
 
  .bold {
   font-weight: bold;
-  color: white;
  }
 
  main {
@@ -35,7 +38,7 @@ body {
   width: 90%;
   justify-content: center;
   text-align: center;
-  background-color: #f4f1ec;
+  background-color: $secondary-background-color;
 }
 
 .container {
@@ -57,7 +60,6 @@ body {
   Media queries for a responsive design.
   -For desktops 1024px.
 */
-
 
 @media only screen and (min-width: 1024px) {
   .container {

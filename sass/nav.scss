@@ -1,8 +1,10 @@
+@import 'variables';
+
 #nav-bar {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: $primary-background-color;
   color: #FFFFFF;
   padding-right: 1.5em;
   padding-left: 1.5em;
@@ -13,7 +15,7 @@
 }
 
 .logo {
-  font-family: 'Bungee', cursive;
+  font-family: $secondary-font;
 }
 
 #angle-down-icon {
