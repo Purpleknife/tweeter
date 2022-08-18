@@ -73,3 +73,21 @@ article.tweet footer .icons {
 article.tweet footer .icons span:hover {
   color: rgb(231, 137, 13);
 }
+
+/* 
+  Media queries for a responsive design.
+  -For desktops 1024px.
+*/
+
+@media only screen and (min-width: 1024px) {
+  article.tweet {
+    width: 100%;
+  }
+
+  article.tweet header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+  }
+}
