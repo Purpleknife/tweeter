@@ -35,10 +35,12 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="logo"><span>tweeter</span></div>
-      <div class="tweet"><span class="bold">Write</span> a new tweet
-      <br/>
-      <div class="angle-down-icon"><i class="fa-solid fa-angles-down"></i></div>
+      <div class="tweet">
+        <span class="bold">Write</span> a new tweet
+      <div id="angle-down-icon">
+        <i class="fa-solid fa-angles-down"></i>
       </div>
+    </div>
     </nav>
 
     <header>
@@ -47,17 +49,17 @@
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2>Jane Doe</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <div id="validation-error-alert"></div>
         <br/>
         <form id="tweet-form">
+          <div id="validation-error-alert"></div>
+          <br/>
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
