@@ -11,18 +11,15 @@
   align-items: center;
   position: fixed;
 }
-
-.logo {
+#nav-bar .logo {
   font-family: "Bungee", cursive;
 }
-
-#angle-down-icon {
+#nav-bar #angle-down-icon {
   color: red;
   margin-left: 50%;
   margin-top: 0.5em;
 }
-
-#angle-down-icon:hover {
+#nav-bar #angle-down-icon:hover {
   position: relative;
   bottom: -10px;
 }

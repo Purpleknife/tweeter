@@ -12,21 +12,23 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-}
 
-.logo {
-  font-family: $secondary-font;
-}
 
-#angle-down-icon {
-  color: red;
-  margin-left: 50%;
-  margin-top: 0.5em;
-}
+  .logo {
+    font-family: $secondary-font;
+  }
 
-#angle-down-icon:hover {
-  position: relative; 
-  bottom: -10px;
+  #angle-down-icon {
+    color: red;
+    margin-left: 50%;
+    margin-top: 0.5em;
+  }
+  
+  #angle-down-icon:hover {
+    position: relative; 
+    bottom: -10px;
+  }
+
 }
 
 
