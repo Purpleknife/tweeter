@@ -6,9 +6,9 @@
 
 
 $(document).ready(() => { //Call the callbacks when the document is fully loaded/ ready.
-  formSubmission();
   loadTweets();
-  renderTweets();
+  formToggle();
+  formSubmission();
 });
 
 
@@ -116,4 +116,17 @@ const validationError = function(msg) { //For error messages animations.
   $errorMsg.hide() //Its default is to be hidden.
     .html(msg) //Show the error msg.
     .slideDown('fast'); //Error box slides down with error msg.
-}
+};
+
+
+
+const formToggle = function() { //Form toggle (Stretch).
+  const $pointer = $('#angle-down-icon');
+  const $form = $('#tweet-form');
+
+  $pointer.on('click', function() {
+    $form.slideToggle(); //Form slides up and down when pointer is clicked.
+    $('textarea').focus(); //Focus on textarea so user can begin typing right away.
+  })
+  
+};
