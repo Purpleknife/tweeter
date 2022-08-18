@@ -6,13 +6,15 @@ header {
   align-items: center;
   flex-direction: column;
   background-color: rgb(231, 137, 13);
-  background-image: url("../images/brick-wall.png");
+  background-image: url('../images/brick-wall.png');
 }
+
 
 /* 
   Media queries for a responsive design.
   -For desktops 1024px.
 */
+
 @media only screen and (min-width: 1024px) {
   header {
     display: flex;
@@ -23,11 +25,13 @@ header {
     margin-top: 200px;
   }
 }
+
 /* To show the username before 1024px (like in the GIF in Compass) */
+
 @media only screen and (min-width: 1400px) {
   header .username {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 300s, opacity 300ms;
-  }
+  }  
 }

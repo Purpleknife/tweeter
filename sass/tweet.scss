@@ -4,6 +4,7 @@
   justify-content: center;
   width: 90%;
   margin: 0 auto;
+
 }
 
 article.tweet {
@@ -33,6 +34,7 @@ article.tweet header span {
   align-items: center;
 }
 
+
 article.tweet header .username {
   font-weight: bold;
   color: rgb(185, 185, 185);
@@ -43,6 +45,7 @@ article.tweet .tweet-content {
   border-bottom: 5px solid grey;
   margin-left: 0.5em;
   margin-right: 0.5em;
+
 }
 
 article.tweet .tweet-content-text {
@@ -75,10 +78,12 @@ article.tweet footer .icons span:hover {
   Media queries for a responsive design.
   -For desktops 1024px.
 */
+
 @media only screen and (min-width: 1024px) {
   article.tweet {
     width: 100%;
   }
+
   article.tweet header {
     display: flex;
     flex-wrap: wrap;

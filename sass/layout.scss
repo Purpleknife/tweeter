@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,22 +13,24 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-.bold {
+
+ .bold {
   font-weight: bold;
   color: white;
-}
+ }
 
-main {
+ main {
   display: flex;
   width: 90%;
   justify-content: center;
@@ -56,6 +57,8 @@ main {
   Media queries for a responsive design.
   -For desktops 1024px.
 */
+
+
 @media only screen and (min-width: 1024px) {
   .container {
     display: flex;
