@@ -3,6 +3,7 @@
 $(document).ready(() => {
   const $scrollUp = $('.scroll-up');
 
+  $scrollUp.hide();
   $(window).scroll(function() {
     const position = $(window).scrollTop();
     
@@ -18,6 +19,7 @@ $(document).ready(() => {
 
   $scrollUp.on('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#tweet-form').slideDown('fast');
     $('textarea').focus(); //Focus on textarea so user can begin typing right away.
   });
 });
