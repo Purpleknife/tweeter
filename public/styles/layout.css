@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+/*
+SCSS variables with CSS values
+-> Goal is to be reused in other files.
+*/
 html {
   box-sizing: border-box;
 }

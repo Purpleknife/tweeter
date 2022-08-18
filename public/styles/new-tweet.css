@@ -1,3 +1,7 @@
+/*
+SCSS variables with CSS values
+-> Goal is to be reused in other files.
+*/
 .new-tweet {
   display: flex;
   flex-direction: column;

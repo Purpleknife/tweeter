@@ -17,10 +17,10 @@ const loadTweets = function() { //Receives an array of tweets as JSON and render
   $.ajax('/tweets', { //To fetch the tweet from the server.
     method: 'GET',
   })
-  .done(function(response) {
-    $('#tweets-container').empty(); //Empty container so we don't end up with repeated old tweets.
-    renderTweets(response);
-  })
+    .done(function(response) {
+      $('#tweets-container').empty(); //Empty container so we don't end up with repeated old tweets.
+      renderTweets(response);
+    });
 };
 
 
@@ -46,16 +46,16 @@ const formSubmission = function() { //Created to host the event handler and the 
       method: 'POST',
       data: $(this).serialize(),
     })
-    .done(function() {
-      loadTweets(); //So the tweet shows up without having to refresh.
-      console.log('Tweet submitted.');
-    })
-    .fail(function() {
-      console.log('Submission failed.');
-    });
+      .done(function() {
+        loadTweets(); //So the tweet shows up without having to refresh.
+        console.log('Tweet submitted.');
+      })
+      .fail(function() {
+        console.log('Submission failed.');
+      });
 
-  $('#tweet-text').val(''); //To clear the form after submission.
-  $('.counter').val(140).css('color', '#545149'); //To reset the counter to its default/ max val: 140.
+    $('#tweet-text').val(''); //To clear the form after submission.
+    $('.counter').val(140).css('color', '#545149'); //To reset the counter to its default/ max val: 140.
   });
 };
 
@@ -102,24 +102,6 @@ const createTweetElement = function(tweet) { //Returns the HTML structure of a t
 
 
 
-const escapeXSS = function(str) { //Function to prevent XSS by re-encoding. Changed its name to escapeXSS() because JS kept mistaking it with the depreciated escape().
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
-
-
-
-const validationError = function(msg) { //For error messages animations.
-  const $errorMsg = $('#validation-error-alert');
-
-  $errorMsg.hide() //Its default is to be hidden.
-    .html(msg) //Show the error msg.
-    .slideDown('fast'); //Error box slides down with error msg.
-};
-
-
-
 const formToggle = function() { //Nav Form toggle (Stretch).
   const $pointer = $('#angle-down-icon');
   const $form = $('#tweet-form');
@@ -127,5 +109,29 @@ const formToggle = function() { //Nav Form toggle (Stretch).
   $pointer.on('click', function() {
     $form.slideToggle(); //Form slides up and down when pointer is clicked.
     $('textarea').focus(); //Focus on textarea so user can begin typing right away.
-  })
+  });
+};
+
+
+
+/*
+Helper functions:
+*/
+
+//Function to prevent XSS by re-encoding. Changed its name to escapeXSS() because JS kept mistaking it with the depreciated escape().
+const escapeXSS = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
+
+//For error messages animations.
+const validationError = function(msg) {
+  const $errorMsg = $('#validation-error-alert');
+
+  $errorMsg.hide()
+    .html(msg) //Show the error msg.
+    .slideDown('fast'); //Error box slides down with error msg.
 };

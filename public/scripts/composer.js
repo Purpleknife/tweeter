@@ -3,7 +3,8 @@
 $(document).ready(() => {
   const $scrollUp = $('.scroll-up');
 
-  $scrollUp.hide();
+  $scrollUp.hide(); //Hide when user is at the top/ page is refreshed.
+
   $(window).scroll(function() {
     const position = $(window).scrollTop();
     
