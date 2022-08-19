@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   const $input = $('textarea');
-  $input.keyup('counter', function() {
+  $input.on('input', function() {
 
     const maxChars = 140;
     const inputLength = $(this).val().length;
