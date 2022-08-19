@@ -13,9 +13,10 @@ This project's goals were:
 ## Features
 
 - Share your thoughts via a `tweet`. Once submitted, it's immediately visible to the public.
+- Special effects like `hover` or `focus`, etc on parts of the App to ensure a unique user experience. 
 - A `Toggle button` in the navigation bar, next to `Write a new tweet`: Hides or shows the Compose Tweet section for better accessibility.
 - A `Scroll up button` at the bottom of the page, to easily navigate through the App.
-- A `responsive design` for desktops to ensure a great experience.
+- A `responsive design` for desktops to guarantee a great experience.
 
 
 ## Getting Started
